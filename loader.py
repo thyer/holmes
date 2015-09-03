@@ -77,6 +77,8 @@ corpus = Corpus("holmes")
 input = ""
 while not input == "QUIT":
     if not input == "":
-        print(corpus.search(input) + "\n\n\n\n\n")
+        results = corpus.search(input)
+        print(results)
+        print("Total occurrences: " + str(len(results)) + "\n\n\n\n\n")
     print("Enter a search term. Type \'QUIT\' to end the program")
     input = raw_input('--> ')
